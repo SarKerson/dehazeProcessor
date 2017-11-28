@@ -12,5 +12,5 @@ public:
 	void getAtmosphere(cv::Mat & output);
 };
 
-void getAtmosphere(cv::Mat & darkchannel, cv::Mat & srcImg, cv::Vec3f atmosphere);
+void getAtmosphere(cv::Mat & darkchannel, cv::Mat & srcImg, cv::Vec3f & atmosphere);
 
