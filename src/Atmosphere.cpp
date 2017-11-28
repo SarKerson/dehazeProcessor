@@ -34,7 +34,7 @@ void Atmosphere::calAtmosphere(cv::Mat & darkchannel, cv::Mat & srcImg, cv::Vec3
 
 		Vec3f vec = srcImg.at<Vec3f>(index / srcImg.cols, index % srcImg.cols);
 		accumulator += vec;
-		std::cout << cv::Mat(accumulator) << "\n";
+		// std::cout << cv::Mat(accumulator) << "\n";
 	}
 
 	// output[0] = accumulator[0] / n_search;
