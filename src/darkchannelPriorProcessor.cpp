@@ -19,15 +19,15 @@ void darkchannelPriorProcessor::process()
 	cv::cvtColor(this->src(), gray, cv::COLOR_BGR2GRAY);
 	darkchannel = guidedFilter(gray, this->darkchannel, 15, 0.001);
 
-	cout << "darkchannel" << endl;
-	imshow("dark", this->darkchannel);
+	// cout << "darkchannel" << endl;
+	// imshow("dark", this->darkchannel);
 	getAtmosphere(this->darkchannel, this->src(), this->atmosphere);
-	cout << "atmosphere" << endl;
+	// cout << "atmosphere" << endl;
 	getTransmission(this->darkchannel, temp);
 	// temp = guidedFilter(gray, this->transmission, 15, 0.001);
 	cv::medianBlur(temp, transmission, 5);
-	cout << "Transmission" << endl;
-	imshow("t", this->transmission);
+	// cout << "Transmission" << endl;
+	// imshow("t", this->transmission);
 }
 
 
@@ -58,12 +58,12 @@ void darkchannelPriorProcessor::hazeFree()
 
 void deHazeByDarkChannelPrior(cv::Mat & input, cv::Mat & output)
 {
-	clock_t start = clock();
+	// clock_t start = clock();
 	darkchannelPriorProcessor dp;
 	dp.setInput(input);
 	dp.process();
 	dp.hazeFree();
 	dp.getOutput(output);
-	cout << (clock() - start) / 1000000.0 << " s\n";
+	// cout << (clock() - start) / 1000000.0 << " s\n";
 }
 
