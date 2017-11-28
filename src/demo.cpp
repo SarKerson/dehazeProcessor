@@ -1,53 +1,11 @@
 #include "../include/darkchannelPriorProcessor.h"
+#include "../include/Autotune.h"
+#include <sstream>
 using namespace cv;
+using namespace std;
 
-void auto_tune_single(Mat & srcImg, Mat & dstImg, double percent = 0.001)
-{
-	Mat matVector = srcImg.reshape(1, 1);	//(1, 116749), no change to srcImg
-	assert(matVector.cols == srcImg.rows * srcImg.cols);
-		// cout << matVector.rows << ", " << matVector.cols << endl;
-	cv::Mat_<int> sortIndex;
-	sortIdx(matVector, 
-			sortIndex, 
-			CV_SORT_EVERY_ROW | cv::SORT_ASCENDING);
-	float_t min = matVector.at<float_t>(sortIndex.at<int>(int(percent * matVector.cols)));
-	float_t max = matVector.at<float_t>(sortIndex.at<int>(int((1.0 - percent) * matVector.cols)));
-	
-	for (int i = 0; i < matVector.cols; ++i) {
-		float_t & pix = matVector.at<float_t>(i);
-		if (pix < min) {
-			pix = min;
-		}
-		else if (pix > max) {
-			pix = max;
-		}
-	}
-
-	float_t diff = max - min;
-	srcImg -= min;
-	srcImg /= diff;
-	dstImg = srcImg;
-	// cout << "1:\t" << (int)matVector.at<uchar>(0, 1) << "\t100: " << (int)matVector.at<uchar>(0, 100) << endl;
-
-}
-
-void auto_tune(Mat & srcImg, Mat & dstImg, double percent = 0.001)
-{
-// #if DEBUG
-// 	clock_t start = clock();
-// #endif
-	srcImg.convertTo(srcImg, CV_32FC3, 1.0 / 255, 0);
-	std::vector<Mat> vrgb(3);
-	split(srcImg, vrgb);
-	auto_tune_single(vrgb[0], vrgb[0]);
-	auto_tune_single(vrgb[1], vrgb[1]);
-	auto_tune_single(vrgb[2], vrgb[2]);
-	merge(vrgb, srcImg);
-	srcImg.convertTo(dstImg, CV_8UC3, 255, 0);
-// #if DEBUG
-// 	cout << "time of auto_tune: " << (clock() - start) / 1000000.0 << " s" << "\n";
-// #endif
-}
+#define SHOW_FRAME 1
+#define VIDEO 0
 
 void testOnImg(Mat & src)
 {	
@@ -57,15 +15,6 @@ void testOnImg(Mat & src)
 	imshow("src", src);
 	auto_tune(src, src);
 	deHazeByDarkChannelPrior(src, dst);
-
-	auto_tune(dst, dst);
-	// std::vector<Mat> vrgb(3);
-	// split(dst, vrgb);
-	// equalizeHist(vrgb[0], vrgb[0]);
-	// equalizeHist(vrgb[1], vrgb[1]);
-	// equalizeHist(vrgb[2], vrgb[2]);
-	// merge(vrgb, dst);
-
 	imshow("dst", dst);
 }
 
@@ -75,16 +24,134 @@ void testOnImg(cv::String filename)
 	testOnImg(src);
 }
 
-void testOnImgs(cv::String filename)
+void writeImg(std::string & in, std::string & out)   //no output showing
 {
-
+	cout << "read--------->" << in << "\n";
+	Mat src = imread(in), dst;
+	if (src.rows > 300)
+		resize(src, src, Size(src.cols * 300 / src.rows, 300));
+	auto_tune(src, src);
+	deHazeByDarkChannelPrior(src, dst);
+	std::vector<int> compression_params;  
+    compression_params.push_back(CV_IMWRITE_PNG_COMPRESSION);  
+    compression_params.push_back(9); 
+	try {
+		imwrite(out, dst, compression_params);
+		cout << "write--------->" << out << "\n";
+	}
+	catch (std::runtime_error & e) {
+		std::cout << e.what() << "\n";
+	}
 }
 
 
+void testOnMedia(std::string filename) 
+{
+	VideoCapture capture(filename);
+#if SHOW_FRAME
+	clock_t start = clock();
+	int fram = 0;
+#endif
+
+	while (true) {
+		Mat frame;
+		capture >> frame;
+#if SHOW_FRAME
+		++fram;
+#endif
+		if (frame.empty()) {
+			cout << "empty" << endl;
+			break;
+		}
+		assert(frame.type() == CV_8UC3);
+		if (frame.rows > 200)
+			resize(frame, frame, Size(frame.cols * 200 / frame.rows, 200));
+		
+		testOnImg(frame);
+
+		int key = waitKey(5);
+		if (key == 'q')
+			break;
+#if SHOW_FRAME
+		if (clock() - start >= 1000000) {
+			cout << "frame: " << fram << " /s" << "\n";
+			fram = 0;
+			start = clock();
+		}
+#endif
+	}
+}
+
+void writeMedia(std::string in, std::string out)
+{
+	VideoCapture capture(in);
+#if SHOW_FRAME
+    clock_t start = clock();
+    int fram = 0;
+#endif
+
+    VideoWriter writer(out, CV_FOURCC('M', 'J', 'P', 'G'), 25.0, Size(355, 200));
+    Mat dst;
+    while (true) {
+        Mat frame;
+        capture >> frame;
+#if SHOW_FRAME
+        ++fram;
+#endif
+        if (frame.empty()) {
+            cout << "empty" << endl;
+            break;
+        }
+        assert(frame.type() == CV_8UC3);
+
+        resize(frame, frame, Size(355, 200));
+        
+        auto_tune(frame, frame);
+		deHazeByDarkChannelPrior(frame, dst);
+
+        writer << dst;
+        int key = waitKey(5);
+        if (key == 'q')
+            break;
+#if SHOW_FRAME
+        if (clock() - start >= 1000000) {
+            cout << "frame: " << fram << " /s" << "\n";
+            fram = 0;
+            start = clock();
+        }
+#endif
+    }
+}
 
 int main(int argc, char const *argv[])
 {
-	testOnImg(argv[1]);
+#if !VIDEO
+	if (argc == 3) {
+		std::vector<cv::String> files;
+		cv::glob(argv[1], files, false);
+		string str = argv[2];
+		for (auto & file : files) {
+			cout << file << endl;
+			stringstream ss_in, ss_out;
+			string in(file, 9), out;
+			ss_in << argv[1] << in;
+			ss_out << argv[2] << in;
+			ss_in >> in;
+			ss_out >> out;
+			writeImg(in, out);
+		}
+	}
+	else if (argc == 2) {
+		testOnImg(argv[1]);
+	}
+#else
+	if (argc == 3) {
+		writeMedia(argv[1], argv[2]);
+	}
+	else if (argc == 2) {
+		testOnMedia(argv[1]);
+	}
+#endif
 	waitKey(0);
 	return 0;
 }
