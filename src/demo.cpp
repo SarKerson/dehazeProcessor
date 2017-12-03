@@ -1,4 +1,5 @@
 #include "../include/darkchannelPriorProcessor.h"
+#include "../include/nonLocalDehazeProcessor.h"
 #include "../include/Autotune.h"
 #include <sstream>
 using namespace cv;
@@ -12,9 +13,20 @@ void testOnImg(Mat & src)
 	Mat dst;
 	if (src.rows > 300)
 		resize(src, src, Size(src.cols * 300 / src.rows, 300));
-	imshow("src", src);
 	auto_tune(src, src);
-	deHazeByDarkChannelPrior(src, dst);
+	imshow("src", src);
+	deHazeByNonLocalMethod(src, dst, "../TR_SPHERE_2500.txt");
+
+	// assert(dst.type() == CV_8UC3);
+	// std::vector<Mat> vrgb(3);
+	// split(dst, vrgb);
+	// equalizeHist(vrgb[0], vrgb[0]);
+	// equalizeHist(vrgb[1], vrgb[1]);
+	// equalizeHist(vrgb[2], vrgb[2]);
+	// merge(vrgb, dst);
+	// auto_tune(dst, dst);
+	// auto_tune(dst, dst);
+	// imshow("autotune", dst);
 	imshow("dst", dst);
 }
 
@@ -26,6 +38,7 @@ void testOnImg(cv::String filename)
 
 void writeImg(std::string & in, std::string & out)   //no output showing
 {
+	clock_t start = clock();	
 	cout << "read--------->" << in << "\n";
 	Mat src = imread(in), dst;
 	if (src.rows > 300)
@@ -42,6 +55,7 @@ void writeImg(std::string & in, std::string & out)   //no output showing
 	catch (std::runtime_error & e) {
 		std::cout << e.what() << "\n";
 	}
+	cout << "##-----------------------time:" << (clock() - start) / 1000000.0 << " s\n";
 }
 
 
