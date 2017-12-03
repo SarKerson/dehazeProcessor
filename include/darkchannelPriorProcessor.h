@@ -3,7 +3,7 @@
 
 
 /**
- * darkchannelPriorProcessor dp(file);
+ * darkchannelPriorProcessor dp(mat);
  * darkchannelPriorProcessor dp(file);
  */
 class darkchannelPriorProcessor: public dehazeProcessor
