@@ -50,7 +50,7 @@ void Transmission::calTransmission(cv::Mat & srcImg,
 
     cvflann::Matrix<int> vecIndex(new int[num_query], num_query, 1);
     cvflann::Matrix<float> vecDist(new float[num_query], num_query, 1);
-    kdtree.knnSearch(query, vecIndex, vecDist, 1, cvflann::SearchParams(1));
+    kdtree.knnSearch(query, vecIndex, vecDist, 1, cvflann::SearchParams(32, 0, false));
     
     for (int i = 0; i < img_scale.rows; ++i) {
         for (int j = 0; j < img_scale.cols; ++j) {
@@ -66,7 +66,6 @@ void Transmission::calTransmission(cv::Mat & srcImg,
             T.at<float>(i, j) = dist[i][j] / max_dist[ind];
         }
     }
-
     T.convertTo(this->t, CV_8UC1, 255, 0);
 }
 

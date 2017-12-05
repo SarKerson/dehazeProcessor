@@ -55,10 +55,10 @@ void nonLocalDehazeProcessor::process()
 	getAtmosphere(this->darkchannel, this->src(), this->atmosphere);
 	cout << "atmosphere" << endl;
 	getTransmission(this->src(), temp, this->atmosphere, *(this->kdtree), this->SPH_NUM);
-	temp = guidedFilter(gray, temp, 15, 0.001);
 	cv::medianBlur(temp, transmission, 5);
+    transmission = guidedFilter(gray, transmission, 15, 0.001);// 
 	// cout << "Transmission" << endl;
-	// imshow("t", this->transmission);
+	imshow("t", this->transmission);
 }
 
 

@@ -13,8 +13,8 @@ void testOnImg(Mat & src)
 	Mat dst;
 	if (src.rows > 300)
 		resize(src, src, Size(src.cols * 300 / src.rows, 300));
-	auto_tune(src, src);
 	imshow("src", src);
+	auto_tune(src, src);
 	deHazeByNonLocalMethod(src, dst, "../TR_SPHERE_2500.txt");
 
 	// assert(dst.type() == CV_8UC3);
