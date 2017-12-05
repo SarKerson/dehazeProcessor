@@ -22,7 +22,7 @@ private:
 	cv::Mat darkchannel;
 	cv::Mat transmission;
 	cv::Vec3f atmosphere;
-	cv::flann::Index * kdtree;
+	cvflann::Index< cvflann::L2_Simple<float> > * kdtree;
 	int SPH_NUM;
 };
 
