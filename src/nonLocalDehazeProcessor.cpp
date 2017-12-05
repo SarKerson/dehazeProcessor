@@ -11,33 +11,32 @@ using namespace std;
 
 void nonLocalDehazeProcessor::init(std::string sph_file)
 {
-	static std::vector<cv::Vec2f> gl_table;
+    this->SPH_NUM = 2500;
+	static float * gl_table = new float[SPH_NUM * 2];
 
 	std::fstream f(sph_file, std::fstream::in);
     if( f.fail() ) return;
     char cmd[1024];
-    // int count = 0;
+    int count = 0;
     while ( f.getline( cmd, 1024) )
     {
         std::string line( cmd );
         line = strutil::trim( line );
         strutil::Tokenizer stokenizer( line, " \t\r\n" );
         std::string token;
-
-        Vec2f vec;
         
         for (int i = 0; i < 2; ++i) {
             stokenizer.nextToken();
             token = stokenizer.getToken();
-            vec[i] = strutil::parseString<float>(token);
+            gl_table[count++] = strutil::parseString<float>(token);
         }
 
-        gl_table.push_back(vec);
     }
-    this->SPH_NUM = gl_table.size();
+    cvflann::Matrix<float> dataset(gl_table, SPH_NUM, 2);
 
-    flann::KDTreeIndexParams indexParams(1);
-    this->kdtree = new flann::Index( Mat(gl_table).reshape(1), indexParams );
+    this->kdtree = new cvflann::Index< cvflann::L2_Simple<float> >( 
+        dataset, cvflann::KDTreeSingleIndexParams(10,true) );
+    (this->kdtree)->buildIndex();
 }
 
 void nonLocalDehazeProcessor::process()

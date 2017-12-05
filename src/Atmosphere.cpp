@@ -42,9 +42,9 @@ void Atmosphere::calAtmosphere(cv::Mat & darkchannel, cv::Mat & srcImg, cv::Vec3
 	// output[2] = (float)accumulator.at<uchar>(0, 2) / n_search;
 	output = accumulator / (float)n_search;
 	
-	if (output[0] > 0.8) output[0] *= 0.7;
-	if (output[1] > 0.8) output[1] *= 0.4;
-	if (output[2] > 0.8) output[2] *= 0.8;
+	if (output[0] > 0.8) output[0] *= 0.8;
+	if (output[1] > 0.8) output[1] *= 0.6;
+	if (output[2] > 0.8) output[2] *= 0.9;
 
 	if (output[0] < 0.0001) output[0] = 0.005;
 	if (output[1] < 0.0001) output[1] = 0.005;

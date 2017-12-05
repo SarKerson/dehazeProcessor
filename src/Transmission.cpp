@@ -14,7 +14,7 @@ void Transmission::calTransmission(cv::Mat & darkchannel, float_t w = 0.95)
 
 void Transmission::calTransmission(cv::Mat & srcImg, 
 					 cv::Vec3f & A, 
-					 cv::flann::Index & kdtree,
+					 cvflann::Index< cvflann::L2_Simple<float> > & kdtree,
 					 const int NUM_SPH)
 {
 	cv::Mat img_scale;
@@ -41,17 +41,21 @@ void Transmission::calTransmission(cv::Mat & srcImg,
             float r = sqrt(nrefine[0] * nrefine[0] +
                             nrefine[1] * nrefine[1] +
                             nrefine[2] * nrefine[2]);
-            std::vector<cv::Vec2f> point; point.push_back(
-                cv::Vec2f(acos(nrefine[2] / r), atan(nrefine[1] / nrefine[0])));
-            std::vector<int> vecIndex;
-            std::vector<float> vecDist;
+
+            float * point = new float[2];
+            point[0] = acos(nrefine[2] / r);
+            point[1] = atan(nrefine[1] / nrefine[0]);
+            cvflann::Matrix<float> query(point, 1, 2);
+
+            cvflann::Matrix<int> vecIndex(new int, 1, 1);
+            cvflann::Matrix<float> vecDist(new float, 1, 1);
             // kdtree.knnSearch(Mat(point).reshape(1), vecIndex, vecDist, 1);
-            kdtree.knnSearch(cv::Mat(point).reshape(1), vecIndex, vecDist, 1);
-            img_index[i][j] = vecIndex[0];
+            kdtree.knnSearch(query, vecIndex, vecDist, 1, cvflann::SearchParams(1));
+            img_index[i][j] = vecIndex[0][0];
 
             dist[i][j] = sqrt(refine[0] * refine[0] + refine[1] * refine[1] + refine[2] * refine[2]);
-            if (dist[i][j] > max_dist[vecIndex[0]])
-                max_dist[vecIndex[0]] = dist[i][j];
+            if (dist[i][j] > max_dist[vecIndex[0][0]])
+                max_dist[vecIndex[0][0]] = dist[i][j];
         }
     }
     for (int i = 0; i < img_scale.rows; ++i) {
@@ -74,7 +78,7 @@ void getTransmission(cv::Mat & darkchannel, cv::Mat & output)
 void getTransmission(cv::Mat & input, 
 					 cv::Mat & output,
 					 cv::Vec3f & A, 
-					 cv::flann::Index & kdtree,
+					 cvflann::Index< cvflann::L2_Simple<float> > & kdtree,
 					 const int NUM_SPH)
 {
 	Transmission t;
