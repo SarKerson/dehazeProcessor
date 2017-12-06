@@ -9,7 +9,7 @@
 > implement of the paper [Single Image Haze Removal Using Dark Channel Prior](https://www.ncbi.nlm.nih.gov/pubmed/20820075)
 
 ## nonLocalDehazeProcessor
-> implement of the paper [http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554]
+> implement of the paper [Non-local Image Dehazing](http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554)
 
 ## build
 
