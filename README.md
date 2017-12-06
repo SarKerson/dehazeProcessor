@@ -12,17 +12,20 @@
 > implement of the paper [http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554]
 
 ## build
-  mkdir build
-  cd build
-  cmake ..
-  make
+
+    mkdir build
+    cd build
+    cmake ..
+    make
 
 ## test on images
-  ./darkchannel <img>       # a single image
-  ./darkchannel <input-dir> <output-dir>  # a foler of images
+
+    ./darkchannel <img>       # a single image
+    ./darkchannel <input-dir> <output-dir>  # a foler of images
 
 ## test on video
-  ./darkchannel <input-video> <output-video>
+
+    ./darkchannel <input-video> <output-video>
 
 ## REFERNCES
 [A Fast Single Image Haze Removal Algorithm Using Color Attenuation Prior](http://ieeexplore.ieee.org/abstract/document/7128396/)
