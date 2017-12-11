@@ -33,4 +33,5 @@
 [Single Image Haze Removal Using White Balancing and Saliency Map](http://www.sciencedirect.com/science/article/pii/S1877050915000435)
 
 [The Next Best Underwater View](http://ieeexplore.ieee.org/document/7780778/)
+
 [Optimized contrast enhancement for real-time image and video dehazing](http://www.sciencedirect.com/science/article/pii/S1047320313000242)
