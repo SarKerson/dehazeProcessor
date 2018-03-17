@@ -49,7 +49,7 @@ make
 ```
 ### 显示帮助
 ./darkchannel --help
-![help](.img/help.png)
+![help](./img/help.png)
 ### 处理单张图像
 此命令将对单张输入图像进行处理并显示结果
 
@@ -67,7 +67,7 @@ make
 此命令将对视频作实时处理，并将结果显示
 
 ./darkchannel --type=1 --input=../data/breed.mp4
-![img](.img/img2.png)
+![img2](./img/img2.png)
 
 ### 处理视频并写入
 此命令将对input参数所指定视频文件做处理，并输出到output所指定文件
