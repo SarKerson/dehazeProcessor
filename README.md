@@ -30,7 +30,8 @@ void darkchannelPriorProcessor::process();
 void darkchannelPriorProcessor::hazeFree();
 ```
 init(std::string sph_file)方法用于读取给定的一个 NX2 矩阵，其中N为半径为1的球面所均分的节点数，
-N越大，则球面的点越密集。每个 1X2 的行向量代表一个点（经度、纬度）。并用该矩阵初始化kd-tree。
+N越大，则球面的点越密集，聚类结果越精确（具体参见论文）。每个 1X2 的行向量代表一个点（经度、纬度）。
+并用该矩阵初始化kd-tree，以在transmission的计算中，提高搜索速度（邻近的点为一个聚类）。
 
 其余两个过程亦作如上一方法中的处理。**唯一的区别在于，Transmission的计算**。
 具体可以查看[src/Transmission.cpp](https://github.com/Sar-Kerson/dehazeProcessor/blob/master/src/Transmission.cpp)
