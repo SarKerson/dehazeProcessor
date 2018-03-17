@@ -53,7 +53,7 @@ void nonLocalDehazeProcessor::process()
 	// cout << "darkchannel" << endl;
 	// imshow("dark", this->darkchannel);
 	getAtmosphere(this->darkchannel, this->src(), this->atmosphere);
-	cout << "atmosphere" << endl;
+	// cout << "atmosphere" << endl;
 	getTransmission(this->src(), temp, this->atmosphere, *(this->kdtree), this->SPH_NUM);
 	cv::medianBlur(temp, transmission, 5);
     transmission = guidedFilter(gray, transmission, 15, 0.001);// 
@@ -90,11 +90,11 @@ void nonLocalDehazeProcessor::hazeFree()
 
 void deHazeByNonLocalMethod(cv::Mat & input, cv::Mat & output, std::string sph_file)
 {
-	clock_t start = clock();
+	// clock_t start = clock();
 	nonLocalDehazeProcessor dp(sph_file);
 	dp.setInput(input);
 	dp.process();
 	dp.hazeFree();
 	dp.getOutput(output);
-	cout << (clock() - start) / 1000000.0 << " s\n";
+	// cout << (clock() - start) / 1000000.0 << " s\n";
 }

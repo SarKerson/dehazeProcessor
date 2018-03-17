@@ -6,7 +6,6 @@ using namespace cv;
 using namespace std;
 
 #define SHOW_FRAME 1
-#define VIDEO 0
 
 void testOnImg(Mat & src)
 {	
@@ -16,17 +15,7 @@ void testOnImg(Mat & src)
 	imshow("src", src);
 	auto_tune(src, src);
 	deHazeByNonLocalMethod(src, dst, "../TR_SPHERE_2500.txt");
-
-	// assert(dst.type() == CV_8UC3);
-	// std::vector<Mat> vrgb(3);
-	// split(dst, vrgb);
-	// equalizeHist(vrgb[0], vrgb[0]);
-	// equalizeHist(vrgb[1], vrgb[1]);
-	// equalizeHist(vrgb[2], vrgb[2]);
-	// merge(vrgb, dst);
-	// auto_tune(dst, dst);
-	// auto_tune(dst, dst);
-	// imshow("autotune", dst);
+	// deHazeByDarkChannelPrior(src, dst);
 	imshow("dst", dst);
 }
 
@@ -36,7 +25,7 @@ void testOnImg(cv::String filename)
 	testOnImg(src);
 }
 
-void writeImg(std::string & in, std::string & out)   //no output showing
+void writeImg(std::string & in, std::string & out)   //no output will display
 {
 	clock_t start = clock();	
 	cout << "read--------->" << in << "\n";
@@ -139,33 +128,56 @@ void writeMedia(std::string in, std::string out)
 
 int main(int argc, char const *argv[])
 {
-#if !VIDEO
-	if (argc == 3) {
-		std::vector<cv::String> files;
-		cv::glob(argv[1], files, false);
-		string str = argv[2];
-		for (auto & file : files) {
-			cout << file << endl;
-			stringstream ss_in, ss_out;
-			string in(file, 9), out;
-			ss_in << argv[1] << in;
-			ss_out << argv[2] << in;
-			ss_in >> in;
-			ss_out >> out;
-			writeImg(in, out);
+	const cv::String keys =
+    "{help h usage ? |      | print this message   		  }"
+    "{type           |0     | '0' for image, '1' for vedio}"
+    "{input          |      | folder for input(s)  		  }"
+    "{output         |      | folder for output(s) 		  }";
+
+    cv::CommandLineParser parser(argc, argv, keys);
+    parser.about("dehazeProcessor By Leiqi Yao");
+
+    if (parser.has("help")) {
+    	parser.printMessage();
+    	return 0;
+    }
+
+    bool type = parser.get<bool>("type");
+
+	if (parser.has("input")) {
+		cv::String input = parser.get<cv::String>("input");
+		if (type == false) {		// "false" means for image
+									// while "true" means for vedio 
+			if (parser.has("output")) {
+				cv::String output = parser.get<cv::String>("output");
+				std::vector<cv::String> files;
+				cv::glob(input, files, false);
+				for (auto & file : files) {
+					cout << file << endl;
+					stringstream ss_in, ss_out;
+					string in(file, 9), out;
+					ss_in << input.c_str() << in;
+					ss_out << output.c_str() << in;
+					ss_in >> in;
+					ss_out >> out;
+					writeImg(in, out);
+				}
+			}
+			else {
+				testOnImg(input.c_str());
+			}
+		}
+		else {
+			if (parser.has("output")) {
+				cv::String output = parser.get<cv::String>("output");
+				writeMedia(input.c_str(), output.c_str());
+			}
+			else {
+				testOnMedia(input.c_str());
+			}
 		}
 	}
-	else if (argc == 2) {
-		testOnImg(argv[1]);
-	}
-#else
-	if (argc == 3) {
-		writeMedia(argv[1], argv[2]);
-	}
-	else if (argc == 2) {
-		testOnMedia(argv[1]);
-	}
-#endif
+
 	waitKey(0);
 	return 0;
 }
