@@ -90,11 +90,21 @@ void nonLocalDehazeProcessor::hazeFree()
 
 void deHazeByNonLocalMethod(cv::Mat & input, cv::Mat & output, std::string sph_file)
 {
-	// clock_t start = clock();
+	clock_t start = clock();
 	nonLocalDehazeProcessor dp(sph_file);
 	dp.setInput(input);
 	dp.process();
 	dp.hazeFree();
 	dp.getOutput(output);
-	// cout << (clock() - start) / 1000000.0 << " s\n";
+	cout << (clock() - start) / 1000000.0 << " s\n";
+}
+
+void deHazeByNonLocalMethod(nonLocalDehazeProcessor & dp, cv::Mat & input, cv::Mat & output)
+{
+    clock_t start = clock();
+    dp.setInput(input);
+    dp.process();
+    dp.hazeFree();
+    dp.getOutput(output);
+    cout << (clock() - start) / 1000000.0 << " s\n";
 }

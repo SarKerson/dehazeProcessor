@@ -27,3 +27,4 @@ private:
 };
 
 void deHazeByNonLocalMethod(cv::Mat & input, cv::Mat & output, std::string sph_file);
+void deHazeByNonLocalMethod(nonLocalDehazeProcessor & dp, cv::Mat & input, cv::Mat & output);

@@ -5,6 +5,7 @@
 using namespace cv;
 using namespace std;
 
+nonLocalDehazeProcessor np("../TR_SPHERE_2500.txt");
 #define SHOW_FRAME 1
 
 void testOnImg(Mat & src)
@@ -14,8 +15,8 @@ void testOnImg(Mat & src)
 		resize(src, src, Size(src.cols * 300 / src.rows, 300));
 	imshow("src", src);
 	auto_tune(src, src);
-	deHazeByNonLocalMethod(src, dst, "../TR_SPHERE_2500.txt");
-	// deHazeByDarkChannelPrior(src, dst);
+	deHazeByNonLocalMethod(np, src, dst);
+	//deHazeByDarkChannelPrior(src, dst);
 	imshow("dst", dst);
 }
 
@@ -33,7 +34,7 @@ void writeImg(std::string & in, std::string & out)   //no output will display
 	if (src.rows > 300)
 		resize(src, src, Size(src.cols * 300 / src.rows, 300));
 	auto_tune(src, src);
-	deHazeByDarkChannelPrior(src, dst);
+	deHazeByNonLocalMethod(np, src, dst);
 	std::vector<int> compression_params;  
     compression_params.push_back(CV_IMWRITE_PNG_COMPRESSION);  
     compression_params.push_back(9); 

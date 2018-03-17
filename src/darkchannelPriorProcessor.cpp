@@ -58,12 +58,12 @@ void darkchannelPriorProcessor::hazeFree()
 
 void deHazeByDarkChannelPrior(cv::Mat & input, cv::Mat & output)
 {
-	// clock_t start = clock();
+	clock_t start = clock();
 	darkchannelPriorProcessor dp;
 	dp.setInput(input);
 	dp.process();
 	dp.hazeFree();
 	dp.getOutput(output);
-	// cout << (clock() - start) / 1000000.0 << " s\n";
+	cout << (clock() - start) / 1000000.0 << " s\n";
 }
 
