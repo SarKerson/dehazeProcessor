@@ -85,18 +85,16 @@ make
 ### 效果
 左边算法一			 右边算法二
 #### 
-![0-0](./include1/f.jpg)![1-0](./include2/f.jpg)
-![0-1](./include1/d.jpg)![1-1](./include2/d.jpg)
-![0-2](./include1/forest.jpg)![1-2](./include2/forest.jpg)
+![0-0](./output1/f.jpg)![1-0](./output2/f.jpg)
+![0-1](./output1/d.jpg)![1-1](./output2/d.jpg)
+![0-2](./output1/forest.jpg)![1-2](./output2/forest.jpg)
 ### 时间
+**对于400x300的图片**
 算法一：
-##-----------------------time:0.389902 s
-##-----------------------time:0.433711 s
-##-----------------------time:0.325486 s
+平均0.07s
+
 算法二：
-##-----------------------time:0.737784 s
-##-----------------------time:0.753439 s
-##-----------------------time:0.645568 s
+平均0.30s
 ## REFERNCES
 [A Fast Single Image Haze Removal Algorithm Using Color Attenuation Prior](http://ieeexplore.ieee.org/abstract/document/7128396/)
 
