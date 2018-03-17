@@ -16,6 +16,7 @@ You can switch your processing method to any one, for example:
 ```
 
 ## USAGE
+![help](./img/help.png)
 ### dehaze a single image
 this command will make a process on a single image and display the result
 
@@ -34,7 +35,7 @@ and generate the result in the output-folder
 this command will make a process on a vedio given and display the result
 
 ./darkchannel --type=1 --input=../data/breed.mp4
-![img2](.img/img2.png)
+![img2](./img/img2.png)
 
 ### dehaze and write a vedio
 this command will make a process on a vedio given and write the result
