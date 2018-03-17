@@ -1,44 +1,76 @@
-# INTRODUCTION
-> A project that, at present, offers two methods for image and video dehazing.
----
-## TWO MAIN METHOD:
+## 两个去雾算法
 ### darkchannelPriorProcessor
-implement of the paper [Single Image Haze Removal Using Dark Channel Prior](https://www.ncbi.nlm.nih.gov/pubmed/20820075)
+此算法实现了论文 [Single Image Haze Removal Using Dark Channel Prior](https://www.ncbi.nlm.nih.gov/pubmed/20820075)的暗通道先验去雾算法。
+可以参考[src/darkchannelPriorProcessor.cpp](https://github.com/Sar-Kerson/dehazeProcessor/blob/master/src/darkchannelPriorProcessor.cpp)
+的实现，该类主要有两个处理方法
+```c++
+void darkchannelPriorProcessor::process();
+void darkchannelPriorProcessor::hazeFree();
+```
+process()方法求解了两个用于计算去雾结果的中间值，Atmosphere（大气光）跟Transmission（透视率）。具体过程
+详见论文，这里不做赘述。
+
+hazefree()方法则用Atmosphere与Transmission作运算得到结果图像。（公式13）
+
+**RESULT: average 27fps for (400x300 video), ubuntu.16.04.amd64, core-i5-3200**
 
 ### nonLocalDehazeProcessor
-implement of the paper [Non-local Image Dehazing](http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554)
+此算法实现了论文 [Non-local Image Dehazing](http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554)。
+代码可以参考[src/nonLocalDehazeProcessor.cpp](https://github.com/Sar-Kerson/dehazeProcessor/blob/master/src/nonLocalDehazeProcessor.cpp)
+的实现。
 
-### SWITCH PROCESSING METHOD
-You can switch your processing method to any one, for example:
+该类主要有三个过程
+```c++
+void nonLocalDehazeProcessor::init(std::string sph_file);
+void darkchannelPriorProcessor::process();
+void darkchannelPriorProcessor::hazeFree();
+```
+init(std::string sph_file)方法用于读取给定的一个 NX2 矩阵，其中N为半径为1的球面所均分的节点数，
+N越大，则球面的点越密集。每个 1X2 的行向量代表一个点（经度、纬度）。并用该矩阵初始化kd-tree。
+
+其余两个过程亦作如上一方法中的处理。**唯一的区别在于，Transmission的计算**。
+具体可以查看[src/Transmission.cpp](https://github.com/Sar-Kerson/dehazeProcessor/blob/master/src/Transmission.cpp)
+
+**RESULT: 7fps for (400x300 video), ubuntu.16.04.amd64, core-i5-3200**
+
+### 处理方法的切换
+你可以使用两种方法对图像作处理，只需一行代码：
 ```C++
 	deHazeByNonLocalMethod(src, dst, "../TR_SPHERE_2500.txt");
 	deHazeByDarkChannelPrior(src, dst);
 ```
 
-## USAGE
-### dehaze a single image
-this command will make a process on a single image and display the result
+## 使用方法
+首先编译代码：
+```
+cd build
+cmake ..
+make
+```
+### 显示帮助
+./darkchannel --help
+![help](.img/help.png)
+### 处理单张图像
+此命令将对单张输入图像进行处理并显示结果
 
 ./darkchannel --type=0 --input=../input/a.bmp 
 ![img0](./img/img0.png)
 
-### dehaze a series of images
-this command will make a process on all images in the given input-folder 
-and generate the result in the output-folder
+### 批量处理图像
+此命令将对input参数所指定目录下所有图片作处理，并输出到output所指定目录下
 
 ./darkchannel --type=0 --input=../input/ --output=../output/
 ![img1](./img/img1.png)
 ![img1-1](./img/img1-1.png)
 
-### dehaze a vedio and display
-this command will make a process on a vedio given and display the result
+### 处理视频并显示
+此命令将对视频作实时处理，并将结果显示
 
 ./darkchannel --type=1 --input=../data/breed.mp4
-![img2](.img/img2.png)
+![img](.img/img2.png)
 
-### dehaze and write a vedio
-this command will make a process on a vedio given and write the result
-into the given output file
+### 处理视频并写入
+此命令将对input参数所指定视频文件做处理，并输出到output所指定文件
 
 ./darkchannel --type=1 --input=../data/breed.mp4 --output=./out.avi
 ![img4](./img/img4.png)
