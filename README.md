@@ -1,3 +1,7 @@
+# 简介
+该项目主要使用C++实现两个去雾算法，可以对图像和视频进行处理，并提供命令行界面进行交互。
+
+---
 ## 两个去雾算法
 ### darkchannelPriorProcessor
 此算法实现了论文 [Single Image Haze Removal Using Dark Channel Prior](https://www.ncbi.nlm.nih.gov/pubmed/20820075)的暗通道先验去雾算法。
@@ -49,6 +53,7 @@ make
 ```
 ### 显示帮助
 ./darkchannel --help
+
 ![help](./img/help.png)
 ### 处理单张图像
 此命令将对单张输入图像进行处理并显示结果
@@ -64,18 +69,24 @@ make
 ![img1-1](./img/img1-1.png)
 
 ### 处理视频并显示
-此命令将对视频作实时处理，并将结果显示
+此命令将对视频作实时处理，并将结果显示（示例使用第二个算法）
 
 ./darkchannel --type=1 --input=../data/breed.mp4
 ![img2](./img/img2.png)
 
 ### 处理视频并写入
-此命令将对input参数所指定视频文件做处理，并输出到output所指定文件
+此命令将对input参数所指定视频文件做处理，并输出到output所指定文件（示例使用第一个算法）
 
 ./darkchannel --type=1 --input=../data/breed.mp4 --output=./out.avi
 ![img4](./img/img4.png)
 
-
+## 两种方法的对比
+### 效果
+![com1](./img/com1.png)
+![com2](./img/com2.png)
+![com3](./img/com3.png)
+### 时间
+![comt](./img/comt.png)
 ## REFERNCES
 [A Fast Single Image Haze Removal Algorithm Using Color Attenuation Prior](http://ieeexplore.ieee.org/abstract/document/7128396/)
 
