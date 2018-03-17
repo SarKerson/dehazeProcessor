@@ -1,31 +1,48 @@
-# dehazeProcessor
-> A project that, at present, offers two methods for image or video dehazing.
+# INTRODUCTION
+> A project that, at present, offers two methods for image and video dehazing.
 ---
-> ## TWO MAIN CLASSES:
-> * darkchannelPriorProcessor
-> * nonLocalDehazeProcessor
+## TWO MAIN METHOD:
+### darkchannelPriorProcessor
+implement of the paper [Single Image Haze Removal Using Dark Channel Prior](https://www.ncbi.nlm.nih.gov/pubmed/20820075)
 
-## darkchannelPriorProcessor
-> implement of the paper [Single Image Haze Removal Using Dark Channel Prior](https://www.ncbi.nlm.nih.gov/pubmed/20820075)
+### nonLocalDehazeProcessor
+implement of the paper [Non-local Image Dehazing](http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554)
 
-## nonLocalDehazeProcessor
-> implement of the paper [Non-local Image Dehazing](http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554)
+### SWITCH PROCESSING METHOD
+You can switch your processing method to any one, for example:
+```C++
+	deHazeByNonLocalMethod(src, dst, "../TR_SPHERE_2500.txt");
+	deHazeByDarkChannelPrior(src, dst);
+```
 
-## build
+## USAGE
+### dehaze a single image
+this command will make a process on a single image and display the result
 
-    mkdir build
-    cd build
-    cmake ..
-    make
+./darkchannel --type=0 --input=../input/a.bmp 
+![img0](./img/img0.png)
 
-## test on images
+### dehaze a series of images
+this command will make a process on all images in the given input-folder 
+and generate the result in the output-folder
 
-    ./darkchannel <img>       # a single image
-    ./darkchannel <input-dir> <output-dir>  # a foler of images
+./darkchannel --type=0 --input=../input/ --output=../output/
+![img1](./img/img1.png)
+![img1-1](./img/img1-1.png)
 
-## test on video
+### dehaze a vedio and display
+this command will make a process on a vedio given and display the result
 
-    ./darkchannel <input-video> <output-video>
+./darkchannel --type=1 --input=../data/breed.mp4
+![img2](.img/img2.png)
+
+### dehaze and write a vedio
+this command will make a process on a vedio given and write the result
+into the given output file
+
+./darkchannel --type=1 --input=../data/breed.mp4 --output=./out.avi
+![img4](./img/img4.png)
+
 
 ## REFERNCES
 [A Fast Single Image Haze Removal Algorithm Using Color Attenuation Prior](http://ieeexplore.ieee.org/abstract/document/7128396/)
