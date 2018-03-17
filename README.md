@@ -4,7 +4,7 @@
 ---
 ## 两个去雾算法
 ### darkchannelPriorProcessor
-此算法实现了论文 [Single Image Haze Removal Using Dark Channel Prior](https://www.ncbi.nlm.nih.gov/pubmed/20820075)的暗通道先验去雾算法。
+该类实现了论文 [Single Image Haze Removal Using Dark Channel Prior](https://www.ncbi.nlm.nih.gov/pubmed/20820075)的暗通道先验去雾算法。
 可以参考[src/darkchannelPriorProcessor.cpp](https://github.com/Sar-Kerson/dehazeProcessor/blob/master/src/darkchannelPriorProcessor.cpp)
 的实现，该类主要有两个处理方法
 ```c++
@@ -19,7 +19,7 @@ hazefree()方法则用Atmosphere与Transmission作运算得到结果图像。（
 **RESULT: average 27fps for (400x300 video), ubuntu.16.04.amd64, core-i5-3200**
 
 ### nonLocalDehazeProcessor
-此算法实现了论文 [Non-local Image Dehazing](http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554)。
+该类实现了论文 [Non-local Image Dehazing](http://ieeexplore.ieee.org/document/7780554/?arnumber=7780554)。
 代码可以参考[src/nonLocalDehazeProcessor.cpp](https://github.com/Sar-Kerson/dehazeProcessor/blob/master/src/nonLocalDehazeProcessor.cpp)
 的实现。
 
@@ -89,7 +89,7 @@ make
 ![0-1](./output1/d.jpg)![1-1](./output2/d.jpg)
 ![0-2](./output1/forest.jpg)![1-2](./output2/forest.jpg)
 ### 时间
-**对于400x300的图片**
+**对于400x300的图片，运行环境为ubuntu.16.04.amd64, core-i5-3200**
 
 算法一：
 平均0.07s
