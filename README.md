@@ -85,9 +85,9 @@ make
 ### 效果
 左边算法一，右边算法二(2500个点的球面)
 #### 
-![0-0](./output1/f.jpg)![1-0](./output2/f.jpg)
-![0-1](./output1/d.jpg)![1-1](./output2/d.jpg)
-![0-2](./output1/forest.jpg)![1-2](./output2/forest.jpg)
+![0](./input/f.jpg)![0-0](./output1/f.jpg)![1-0](./output2/f.jpg)
+![1](./input/d.jpg)![0-1](./output1/d.jpg)![1-1](./output2/d.jpg)
+![2](./input/forest.jpg)![0-2](./output1/forest.jpg)![1-2](./output2/forest.jpg)
 ### 时间
 **对于400x300的图片，运行环境为ubuntu.16.04.amd64, core-i5-3200**
 
