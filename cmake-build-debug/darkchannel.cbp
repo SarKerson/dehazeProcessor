@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="darkchannel" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\OpenCV\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="darkchannel">
+         <Option output="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/darkchannel" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED" />
+            <Add directory="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/../include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/aarch64-linux-gnu" />
+            <Add directory="/usr/include/aarch64-linux-gnu/c++/5" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/lib/gcc/aarch64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/aarch64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 darkchannel" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="darkchannel/fast">
+         <Option output="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/darkchannel" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DOPENCV_TRAITS_ENABLE_DEPRECATED" />
+            <Add directory="/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/../include" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/aarch64-linux-gnu" />
+            <Add directory="/usr/include/aarch64-linux-gnu/c++/5" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/opencv" />
+            <Add directory="/usr/lib/gcc/aarch64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/aarch64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 darkchannel/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/src/Atmosphere.cpp">
+         <Option target="darkchannel"/>
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/src/Darkchannel.cpp">
+         <Option target="darkchannel"/>
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/src/Transmission.cpp">
+         <Option target="darkchannel"/>
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/src/darkchannelPriorProcessor.cpp">
+         <Option target="darkchannel"/>
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/src/dehazeProcessor.cpp">
+         <Option target="darkchannel"/>
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/src/demo.cpp">
+         <Option target="darkchannel"/>
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/src/guidedfilter.cpp">
+         <Option target="darkchannel"/>
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/src/nonLocalDehazeProcessor.cpp">
+         <Option target="darkchannel"/>
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/../../../../usr/share/OpenCV/OpenCVConfig-version.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/../../../../usr/share/OpenCV/OpenCVConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/../../../../usr/share/OpenCV/OpenCVModules.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\" />
+      </Unit>
+      <Unit filename="/home/ubuntu/SarKerson/dehazeProcessor/../../../../usr/share/OpenCV/OpenCVModules-release.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

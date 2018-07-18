@@ -2,6 +2,7 @@
 #include "../include/nonLocalDehazeProcessor.h"
 #include "../include/Autotune.h"
 #include <sstream>
+
 using namespace cv;
 using namespace std;
 
@@ -36,7 +37,7 @@ void writeImg(std::string & in, std::string & out)   //no output will display
 	auto_tune(src, src);
 	deHazeByNonLocalMethod(np, src, dst);
 	std::vector<int> compression_params;  
-    compression_params.push_back(CV_IMWRITE_PNG_COMPRESSION);  
+    compression_params.push_back(IMWRITE_PNG_COMPRESSION);
     compression_params.push_back(9); 
 	try {
 		imwrite(out, dst, compression_params);
@@ -94,7 +95,7 @@ void writeMedia(std::string in, std::string out)
     int fram = 0;
 #endif
 
-    VideoWriter writer(out, CV_FOURCC('M', 'J', 'P', 'G'), 25.0, Size(355, 200));
+    VideoWriter writer(out, VideoWriter::fourcc('M', 'J', 'P', 'G'), 25.0, Size(355, 200));
     Mat dst;
     while (true) {
         Mat frame;

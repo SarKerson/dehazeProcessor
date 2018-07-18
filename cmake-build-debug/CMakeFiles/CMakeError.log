@@ -1,0 +1,56 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9e892/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9e892.dir/build.make CMakeFiles/cmTC_9e892.dir/build
+make[1]: Entering directory '/media/ubuntu/sdcard/codes/SarKerson/dehazeProcessor/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9e892.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_9e892.dir/CheckSymbolExists.c.o   -c /home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9e892
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e892.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC     CMakeFiles/cmTC_9e892.dir/CheckSymbolExists.c.o  -o cmTC_9e892 -rdynamic 
+CMakeFiles/cmTC_9e892.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9e892.dir/build.make:97: recipe for target 'cmTC_9e892' failed
+make[1]: *** [cmTC_9e892] Error 1
+make[1]: Leaving directory '/media/ubuntu/sdcard/codes/SarKerson/dehazeProcessor/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9e892/fast' failed
+make: *** [cmTC_9e892/fast] Error 2
+
+File /home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/SarKerson/dehazeProcessor/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d2a7b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d2a7b.dir/build.make CMakeFiles/cmTC_d2a7b.dir/build
+make[1]: Entering directory '/media/ubuntu/sdcard/codes/SarKerson/dehazeProcessor/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2a7b.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d2a7b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2a7b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2a7b.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d2a7b.dir/CheckFunctionExists.c.o  -o cmTC_d2a7b -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d2a7b.dir/build.make:97: recipe for target 'cmTC_d2a7b' failed
+make[1]: *** [cmTC_d2a7b] Error 1
+make[1]: Leaving directory '/media/ubuntu/sdcard/codes/SarKerson/dehazeProcessor/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d2a7b/fast' failed
+make: *** [cmTC_d2a7b/fast] Error 2
+
+

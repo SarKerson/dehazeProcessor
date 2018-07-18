@@ -1,4 +1,4 @@
-# Install script for directory: /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor
+# Install script for directory: /home/ubuntu/SarKerson/dehazeProcessor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ubuntu/SarKerson/dehazeProcessor/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

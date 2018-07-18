@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor
+CMAKE_SOURCE_DIR = /home/ubuntu/SarKerson/dehazeProcessor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build
+CMAKE_BINARY_DIR = /home/ubuntu/SarKerson/dehazeProcessor/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/darkchannel.dir/depend.make
@@ -57,42 +57,18 @@ include CMakeFiles/darkchannel.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/darkchannel.dir/flags.make
 
-CMakeFiles/darkchannel.dir/src/Transmission.cpp.o: CMakeFiles/darkchannel.dir/flags.make
-CMakeFiles/darkchannel.dir/src/Transmission.cpp.o: ../src/Transmission.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/darkchannel.dir/src/Transmission.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/Transmission.cpp.o -c /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Transmission.cpp
-
-CMakeFiles/darkchannel.dir/src/Transmission.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/Transmission.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Transmission.cpp > CMakeFiles/darkchannel.dir/src/Transmission.cpp.i
-
-CMakeFiles/darkchannel.dir/src/Transmission.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/Transmission.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Transmission.cpp -o CMakeFiles/darkchannel.dir/src/Transmission.cpp.s
-
-CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.requires:
-
-.PHONY : CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.requires
-
-CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.provides: CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.requires
-	$(MAKE) -f CMakeFiles/darkchannel.dir/build.make CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.provides.build
-.PHONY : CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.provides
-
-CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/Transmission.cpp.o
-
-
 CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o: CMakeFiles/darkchannel.dir/flags.make
 CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o: ../src/nonLocalDehazeProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o -c /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/nonLocalDehazeProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o -c /home/ubuntu/SarKerson/dehazeProcessor/src/nonLocalDehazeProcessor.cpp
 
 CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/nonLocalDehazeProcessor.cpp > CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/SarKerson/dehazeProcessor/src/nonLocalDehazeProcessor.cpp > CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.i
 
 CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/nonLocalDehazeProcessor.cpp -o CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/SarKerson/dehazeProcessor/src/nonLocalDehazeProcessor.cpp -o CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.s
 
 CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o.requires:
 
@@ -105,42 +81,18 @@ CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o.provides: CMakeFile
 CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o
 
 
-CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o: CMakeFiles/darkchannel.dir/flags.make
-CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o: ../src/darkchannelPriorProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o -c /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/darkchannelPriorProcessor.cpp
-
-CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/darkchannelPriorProcessor.cpp > CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.i
-
-CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/darkchannelPriorProcessor.cpp -o CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.s
-
-CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.requires:
-
-.PHONY : CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.requires
-
-CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.provides: CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.requires
-	$(MAKE) -f CMakeFiles/darkchannel.dir/build.make CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.provides.build
-.PHONY : CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.provides
-
-CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o
-
-
 CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o: CMakeFiles/darkchannel.dir/flags.make
 CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o: ../src/guidedfilter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o -c /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/guidedfilter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o -c /home/ubuntu/SarKerson/dehazeProcessor/src/guidedfilter.cpp
 
 CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/guidedfilter.cpp > CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/SarKerson/dehazeProcessor/src/guidedfilter.cpp > CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.i
 
 CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/guidedfilter.cpp -o CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/SarKerson/dehazeProcessor/src/guidedfilter.cpp -o CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.s
 
 CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o.requires:
 
@@ -153,66 +105,18 @@ CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o.provides: CMakeFiles/darkchann
 CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o
 
 
-CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o: CMakeFiles/darkchannel.dir/flags.make
-CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o: ../src/Darkchannel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o -c /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Darkchannel.cpp
-
-CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Darkchannel.cpp > CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.i
-
-CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Darkchannel.cpp -o CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.s
-
-CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.requires:
-
-.PHONY : CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.requires
-
-CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.provides: CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.requires
-	$(MAKE) -f CMakeFiles/darkchannel.dir/build.make CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.provides.build
-.PHONY : CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.provides
-
-CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o
-
-
-CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o: CMakeFiles/darkchannel.dir/flags.make
-CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o: ../src/Atmosphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o -c /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Atmosphere.cpp
-
-CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Atmosphere.cpp > CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.i
-
-CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Atmosphere.cpp -o CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.s
-
-CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.requires:
-
-.PHONY : CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.requires
-
-CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.provides: CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.requires
-	$(MAKE) -f CMakeFiles/darkchannel.dir/build.make CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.provides.build
-.PHONY : CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.provides
-
-CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o
-
-
 CMakeFiles/darkchannel.dir/src/demo.cpp.o: CMakeFiles/darkchannel.dir/flags.make
 CMakeFiles/darkchannel.dir/src/demo.cpp.o: ../src/demo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/darkchannel.dir/src/demo.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/demo.cpp.o -c /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/demo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/darkchannel.dir/src/demo.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/demo.cpp.o -c /home/ubuntu/SarKerson/dehazeProcessor/src/demo.cpp
 
 CMakeFiles/darkchannel.dir/src/demo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/demo.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/demo.cpp > CMakeFiles/darkchannel.dir/src/demo.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/SarKerson/dehazeProcessor/src/demo.cpp > CMakeFiles/darkchannel.dir/src/demo.cpp.i
 
 CMakeFiles/darkchannel.dir/src/demo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/demo.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/demo.cpp -o CMakeFiles/darkchannel.dir/src/demo.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/SarKerson/dehazeProcessor/src/demo.cpp -o CMakeFiles/darkchannel.dir/src/demo.cpp.s
 
 CMakeFiles/darkchannel.dir/src/demo.cpp.o.requires:
 
@@ -225,18 +129,90 @@ CMakeFiles/darkchannel.dir/src/demo.cpp.o.provides: CMakeFiles/darkchannel.dir/s
 CMakeFiles/darkchannel.dir/src/demo.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/demo.cpp.o
 
 
+CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o: CMakeFiles/darkchannel.dir/flags.make
+CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o: ../src/Atmosphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o -c /home/ubuntu/SarKerson/dehazeProcessor/src/Atmosphere.cpp
+
+CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/SarKerson/dehazeProcessor/src/Atmosphere.cpp > CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.i
+
+CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/SarKerson/dehazeProcessor/src/Atmosphere.cpp -o CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.s
+
+CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.requires:
+
+.PHONY : CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.requires
+
+CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.provides: CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.requires
+	$(MAKE) -f CMakeFiles/darkchannel.dir/build.make CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.provides.build
+.PHONY : CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.provides
+
+CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o
+
+
+CMakeFiles/darkchannel.dir/src/Transmission.cpp.o: CMakeFiles/darkchannel.dir/flags.make
+CMakeFiles/darkchannel.dir/src/Transmission.cpp.o: ../src/Transmission.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/darkchannel.dir/src/Transmission.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/Transmission.cpp.o -c /home/ubuntu/SarKerson/dehazeProcessor/src/Transmission.cpp
+
+CMakeFiles/darkchannel.dir/src/Transmission.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/Transmission.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/SarKerson/dehazeProcessor/src/Transmission.cpp > CMakeFiles/darkchannel.dir/src/Transmission.cpp.i
+
+CMakeFiles/darkchannel.dir/src/Transmission.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/Transmission.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/SarKerson/dehazeProcessor/src/Transmission.cpp -o CMakeFiles/darkchannel.dir/src/Transmission.cpp.s
+
+CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.requires:
+
+.PHONY : CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.requires
+
+CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.provides: CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.requires
+	$(MAKE) -f CMakeFiles/darkchannel.dir/build.make CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.provides.build
+.PHONY : CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.provides
+
+CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/Transmission.cpp.o
+
+
+CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o: CMakeFiles/darkchannel.dir/flags.make
+CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o: ../src/darkchannelPriorProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o -c /home/ubuntu/SarKerson/dehazeProcessor/src/darkchannelPriorProcessor.cpp
+
+CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/SarKerson/dehazeProcessor/src/darkchannelPriorProcessor.cpp > CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.i
+
+CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/SarKerson/dehazeProcessor/src/darkchannelPriorProcessor.cpp -o CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.s
+
+CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.requires:
+
+.PHONY : CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.requires
+
+CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.provides: CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/darkchannel.dir/build.make CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.provides.build
+.PHONY : CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.provides
+
+CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o
+
+
 CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o: CMakeFiles/darkchannel.dir/flags.make
 CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o: ../src/dehazeProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o -c /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/dehazeProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o -c /home/ubuntu/SarKerson/dehazeProcessor/src/dehazeProcessor.cpp
 
 CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/dehazeProcessor.cpp > CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/SarKerson/dehazeProcessor/src/dehazeProcessor.cpp > CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.i
 
 CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/dehazeProcessor.cpp -o CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/SarKerson/dehazeProcessor/src/dehazeProcessor.cpp -o CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.s
 
 CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o.requires:
 
@@ -249,48 +225,112 @@ CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o.provides: CMakeFiles/darkch
 CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o
 
 
+CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o: CMakeFiles/darkchannel.dir/flags.make
+CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o: ../src/Darkchannel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o -c /home/ubuntu/SarKerson/dehazeProcessor/src/Darkchannel.cpp
+
+CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/SarKerson/dehazeProcessor/src/Darkchannel.cpp > CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.i
+
+CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/SarKerson/dehazeProcessor/src/Darkchannel.cpp -o CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.s
+
+CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.requires:
+
+.PHONY : CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.requires
+
+CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.provides: CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.requires
+	$(MAKE) -f CMakeFiles/darkchannel.dir/build.make CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.provides.build
+.PHONY : CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.provides
+
+CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.provides.build: CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o
+
+
 # Object files for target darkchannel
 darkchannel_OBJECTS = \
-"CMakeFiles/darkchannel.dir/src/Transmission.cpp.o" \
 "CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o" \
-"CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o" \
 "CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o" \
-"CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o" \
-"CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o" \
 "CMakeFiles/darkchannel.dir/src/demo.cpp.o" \
-"CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o"
+"CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o" \
+"CMakeFiles/darkchannel.dir/src/Transmission.cpp.o" \
+"CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o" \
+"CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o" \
+"CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o"
 
 # External object files for target darkchannel
 darkchannel_EXTERNAL_OBJECTS =
 
-darkchannel: CMakeFiles/darkchannel.dir/src/Transmission.cpp.o
 darkchannel: CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o
-darkchannel: CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o
 darkchannel: CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o
-darkchannel: CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o
-darkchannel: CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o
 darkchannel: CMakeFiles/darkchannel.dir/src/demo.cpp.o
+darkchannel: CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o
+darkchannel: CMakeFiles/darkchannel.dir/src/Transmission.cpp.o
+darkchannel: CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o
 darkchannel: CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o
+darkchannel: CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o
 darkchannel: CMakeFiles/darkchannel.dir/build.make
-darkchannel: /usr/local/lib/libopencv_dnn.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_ml.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_objdetect.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_shape.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_stitching.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_superres.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_videostab.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_calib3d.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_features2d.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_flann.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_highgui.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_photo.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_video.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_videoio.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_imgcodecs.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_imgproc.so.3.3.1
-darkchannel: /usr/local/lib/libopencv_core.so.3.3.1
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_videostab.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudastereo.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudaobjdetect.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudabgsegm.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_superres.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_dpm.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_hfs.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_saliency.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_dnn_objdetect.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_stereo.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_tracking.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_surface_matching.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_face.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_ccalib.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_xobjdetect.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_reg.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_bgsegm.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_structured_light.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_line_descriptor.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_aruco.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_fuzzy.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_img_hash.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_xfeatures2d.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_freetype.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_bioinspired.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_rgbd.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudafeatures2d.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_shape.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudacodec.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudaoptflow.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudalegacy.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudawarping.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_datasets.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_plot.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_text.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_dnn.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_ml.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_photo.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudaimgproc.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudafilters.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudaarithm.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_objdetect.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_video.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_features2d.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_flann.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.0.0
+darkchannel: /usr/lib/aarch64-linux-gnu/libopencv_cudev.so.4.0.0
 darkchannel: CMakeFiles/darkchannel.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable darkchannel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable darkchannel"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/darkchannel.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -298,14 +338,14 @@ CMakeFiles/darkchannel.dir/build: darkchannel
 
 .PHONY : CMakeFiles/darkchannel.dir/build
 
-CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.requires
 CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o.requires
-CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.requires
 CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o.requires
-CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.requires
-CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.requires
 CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/demo.cpp.o.requires
+CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o.requires
+CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/Transmission.cpp.o.requires
+CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o.requires
 CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o.requires
+CMakeFiles/darkchannel.dir/requires: CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o.requires
 
 .PHONY : CMakeFiles/darkchannel.dir/requires
 
@@ -314,6 +354,6 @@ CMakeFiles/darkchannel.dir/clean:
 .PHONY : CMakeFiles/darkchannel.dir/clean
 
 CMakeFiles/darkchannel.dir/depend:
-	cd /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build /home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/SarKerson/dehazeProcessor/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/SarKerson/dehazeProcessor /home/ubuntu/SarKerson/dehazeProcessor /home/ubuntu/SarKerson/dehazeProcessor/build /home/ubuntu/SarKerson/dehazeProcessor/build /home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/darkchannel.dir/depend
 

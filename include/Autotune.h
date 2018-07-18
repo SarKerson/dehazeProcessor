@@ -11,7 +11,7 @@ void auto_tune_single(Mat & srcImg, Mat & dstImg, double percent = 0.001)
 	cv::Mat_<int> sortIndex;
 	sortIdx(matVector, 
 			sortIndex, 
-			CV_SORT_EVERY_ROW | cv::SORT_ASCENDING);
+			SORT_EVERY_ROW | SORT_ASCENDING);
 	float_t min = matVector.at<float_t>(sortIndex.at<int>(int(percent * matVector.cols)));
 	float_t max = matVector.at<float_t>(sortIndex.at<int>(int((1.0 - percent) * matVector.cols)));
 	

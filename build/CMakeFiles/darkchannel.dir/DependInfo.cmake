@@ -4,21 +4,25 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Atmosphere.cpp" "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o"
-  "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Darkchannel.cpp" "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o"
-  "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/Transmission.cpp" "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/Transmission.cpp.o"
-  "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/darkchannelPriorProcessor.cpp" "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o"
-  "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/dehazeProcessor.cpp" "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o"
-  "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/demo.cpp" "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/demo.cpp.o"
-  "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/guidedfilter.cpp" "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o"
-  "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/src/nonLocalDehazeProcessor.cpp" "/home/sar/SarKerson/dehaze/darkchannel_prior/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o"
+  "/home/ubuntu/SarKerson/dehazeProcessor/src/Atmosphere.cpp" "/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/Atmosphere.cpp.o"
+  "/home/ubuntu/SarKerson/dehazeProcessor/src/Darkchannel.cpp" "/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/Darkchannel.cpp.o"
+  "/home/ubuntu/SarKerson/dehazeProcessor/src/Transmission.cpp" "/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/Transmission.cpp.o"
+  "/home/ubuntu/SarKerson/dehazeProcessor/src/darkchannelPriorProcessor.cpp" "/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/darkchannelPriorProcessor.cpp.o"
+  "/home/ubuntu/SarKerson/dehazeProcessor/src/dehazeProcessor.cpp" "/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/dehazeProcessor.cpp.o"
+  "/home/ubuntu/SarKerson/dehazeProcessor/src/demo.cpp" "/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/demo.cpp.o"
+  "/home/ubuntu/SarKerson/dehazeProcessor/src/guidedfilter.cpp" "/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/guidedfilter.cpp.o"
+  "/home/ubuntu/SarKerson/dehazeProcessor/src/nonLocalDehazeProcessor.cpp" "/home/ubuntu/SarKerson/dehazeProcessor/build/CMakeFiles/darkchannel.dir/src/nonLocalDehazeProcessor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "OPENCV_TRAITS_ENABLE_DEPRECATED"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/local/include"
-  "/usr/local/include/opencv"
+  "/usr/include/opencv"
   "../include"
   )
 
